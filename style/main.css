@@ -1,0 +1,116 @@
+/*declarando variáveis*/
+:root{
+    --vermelho:#e50914;
+    --preto:#141414;
+}
+
+/*reset de pagina css*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*comando para que os elementos não ultrapassem a borda da caixa*/
+}
+/*elementos base*/
+body{
+    background: var(--preto);
+    font-family: 'Arial', Times, serif;
+    color: white;
+
+}
+/*display:flex joga os containers para linha*/
+/*aling-items alinha os conteiners na vertical (eixo Y)*/
+/*justfy-content alinha os containers na horizontal (eixo X)*/
+header .container  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo{
+    margin-left: 5px;
+    color: var(--vermelho); 
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: #aaa;
+    margin-right: 10px;
+}
+/*mudando a cor da letra ao passar o mouse em cima*/
+header nav a:hover{
+    color: #fff;
+}
+
+/*filme principal*/
+
+.filme-principal{
+    font-size: 16px;
+    /*criando uma camada fina "escura" na imagem para melhorar a visão das letras*/
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('../img/capa-house.jpg');
+    
+    height: 450px;
+    background-size: cover;
+
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.filme-principal .titulo{
+    margin-top: 15%;
+    font-size: 45px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.botao{/*criando um efeito de transparência com o RGBA*/
+    background-color: rgba(0, 0, 0,.50);
+    border: none;
+    color: white;
+
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+    /*cursor indica no mouse que é um botão (mãozinha)*/
+    cursor: pointer;
+    /*animação ao passar o mouse no botão*/
+    transition: .3 ease all;
+}
+/*invertendo a cor do botão ao passar o mouse por cima*/
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+
+.botao i{
+    margin-right: 8px ;
+}
+
+/*WRAPPER = ENVELOPAR - NESTE HTML CHAMAMOS O WRAPPER DE CONTAINER*/
+
+.container{
+    margin-left: 20px;
+}
+
+.filme-principal .container{
+    width: 70%; /*comando que limita até onde pode ir o texto na página*/
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes{
+    margin-top: 5px;
+}
+
